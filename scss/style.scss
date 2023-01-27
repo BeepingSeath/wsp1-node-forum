@@ -1,5 +1,69 @@
 @use "reset";
 
 body {
-    background-color: red;
+    background-color: rgba($color: #00FF00, $alpha: 1.0);
+}
+.container {
+    width: min(80ch, 100vw - 2rem);
+    margin-inline: auto;
+    background-color: rgba($color: #00BB00, $alpha: 1.0);
+
+    > ul {
+    padding: 0 1rem;
+    
+    > li{
+        padding: 1rem 0;
+        list-style: none;
+    }
+}
+}
+.navbar {
+    background-color: rgba($color: #00DD00, $alpha: 0.7);
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 2rem;
+    }
+    &__button {
+        background-color: transparent;
+
+        @media (min-width: 600px) {
+            display: none;
+        }
+    }
+
+    &__collapse {
+        @media (max-width: 599px) {
+            display: none;
+        }
+        > ul {
+            display: flex;
+            gap: 1rem;
+            list-style: none;
+        }
+        &--show {
+            display: block;
+            width: 100%;
+            > ul {
+                flex-direction: column;
+                padding: 0;
+            }
+        }
+    }
+    &__logo > img {
+        width: 4rem;
+    }
+}
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+.post {
+    border-style: solid;
+    border-width: 0.2rem;
 }

@@ -8,7 +8,11 @@
     <title>{{ title }}</title>
 </head>
 <body>
+    {% include "navigation.njk" %}
+    <div class="container">
     {% block  content %}
     {% endblock %}
+    </div>
+    <script src="js/menu.js"></script>
 </body>
 </html>

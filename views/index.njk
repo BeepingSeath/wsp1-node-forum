@@ -4,8 +4,8 @@
   <ul>
     {% for row in rows %}
         <li>
-            {{ row | dump }}
+            {% include "post.njk" %}
         </li>
     {% endfor %}
-</ul>
+    </ul>
 {% endblock %}
